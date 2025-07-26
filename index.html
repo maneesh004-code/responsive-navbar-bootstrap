@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <!-- Brand/Logo -->
+            <a class="navbar-brand" href="#home">
+                <i class="bi bi-code-slash"></i> WebDev
+            </a>
+            
+            <!-- Mobile Hamburger Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">
+                            <i class="bi bi-house"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">
+                            <i class="bi bi-person"></i> About
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-gear"></i> Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="#web-design">Web Design</a></li>
+                            <li><a class="dropdown-item" href="#web-development">Web Development</a></li>
+                            <li><a class="dropdown-item" href="#seo">SEO Services</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#consulting">Consulting</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">
+                            <i class="bi bi-collection"></i> Portfolio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">
+                            <i class="bi bi-journal-text"></i> Blog
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">
+                            <i class="bi bi-envelope"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Demo Content Sections -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h1 class="display-4 mb-4">Welcome to Website</h1>
+            <p class="lead">"Hey, I'm Maneesh — Let's Build Something Amazing on the Web."</p>
+            <a href="#about" class="btn btn-light btn-lg mt-3">Get Started</a>
+        </div>
+    </section>
+    
+    <section id="about" class="section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-4">About Us</h2>
+                    <p class="lead">We are  a passionate Full-Stack Developer dedicated to crafting impactful and user-friendly digital experiences.
+                                With a strong foundation in both frontend and backend development, I bring ideas to life through clean code and creative design..</p>
+                    <p>    My expertise spans across modern technologies like <strong>React</strong>, <strong>Node.js</strong>, <strong>MongoDB</strong>, and <strong>Tailwind CSS</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="portfolio" class="section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-4">Our Portfolio</h2>
+                    <p class="lead">Take a look at some of our recent work and projects that showcase our expertise in web development and design.</p>
+                    <div class="row mt-5">
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-laptop display-4 text-primary mb-3"></i>
+                                    <h5>Web Applications</h5>
+                                    <p>Custom web applications built with modern technologies.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-phone display-4 text-primary mb-3"></i>
+                                    <h5>Mobile-First Design</h5>
+                                    <p>Responsive designs that work perfectly on all devices.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-shop display-4 text-primary mb-3"></i>
+                                    <h5>E-commerce</h5>
+                                    <p>Powerful online stores with seamless user experiences.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="blog" class="section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-4">Latest Blog Posts</h2>
+                    <p class="lead">   Stay updated with my latest insights on web development, design strategies, and tech innovations.</p>
+                    <p>  From beginner-friendly tutorials to full-stack development techniques, I share everything I learn to help fellow developers grow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-4">Get In Touch</h2>
+                    <p class="lead">Ready to start your next project? We'd love to hear from you!</p>
+                    <div class="row mt-4">
+                        <div class="col-md-4 mb-3">
+                            <i class="bi bi-envelope display-5 text-primary"></i>
+                            <p class="mt-2">maneeshjain501@gmail.com</p>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <i class="bi bi-telephone display-5 text-primary"></i>
+                            <p class="mt-2">+91 7800367977</p>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <i class="bi bi-geo-alt display-5 text-primary"></i>
+                            <p class="mt-2">Prayagraj , UP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Bootstrap 5 JavaScript Bundle -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+/* Custom styles for responsive navigation bar */
+
+/* Navbar Brand Styling */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #007bff !important;
+}
+
+/* Navigation Links Styling */
+.navbar-nav .nav-link {
+    font-weight: 500;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff !important;
+    transform: translateY(-2px);
+}
+
+/* Hover underline effect for desktop */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: #007bff;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 80%;
+}
+
+/* Hamburger Toggle Button */
+.navbar-toggler {
+    border: none;
+    padding: 4px 8px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Custom hamburger icon animation */
+.navbar-toggler-icon {
+    background-image: none;
+    position: relative;
+    width: 24px;
+    height: 18px;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon {
+    background-color: #333;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+    top: 0;
+}
+
+.navbar-toggler-icon::after {
+    bottom: 0;
+}
+
+.navbar-toggler-icon {
+    background: linear-gradient(to bottom, transparent 45%, #333 45%, #333 55%, transparent 55%);
+}
+
+/* Animate hamburger when active */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background: transparent;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+    top: 8px;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+    bottom: 8px;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #007bff;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+/* Content Sections */
+.section {
+    padding: 80px 0;
+    min-height: 400px;
+}
+
+.section:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Active Navigation Link */
+.navbar-nav .nav-link.active {
+    color: #007bff  !important;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        text-align: center;
+        padding-top: 1rem;
+    }
+    
+    .navbar-nav .nav-link {
+        margin: 10px 0;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+    
+    .navbar-nav .nav-link:hover {
+        background-color: #f8f9fa;
+        transform: none;
+    }
+    
+    .navbar-nav .nav-link::after {
+        display: none;
+    }
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+    
+    .hero-section {
+        padding: 40px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .section {
+        padding: 40px 0;
+    }
+    
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Card Hover Effects */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Button Styles */
+.btn {
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Accessibility Improvements */
+.nav-link:focus,
+.btn:focus,
+.dropdown-toggle:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .navbar {
+        display: none;
+    }
+    
+    .hero-section {
+        background: none !important;
+        color: black !important;
+    }
+    
+    .section {
+        padding: 20px 0;
+    }
+}
